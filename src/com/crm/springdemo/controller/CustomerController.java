@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.crm.springdemo.dao.CustomerDAO;
 import com.crm.springdemo.entity.Customer;
+import com.crm.springdemo.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 
 	@Autowired
-	private CustomerDAO customerDAO;
+	private CustomerService customerService;
 
 	@RequestMapping("/list")
 	public String listCustomers(Model model) {
-		List<Customer> customers = customerDAO.getAllCustomers();
+		List<Customer> customers = customerService.getAllCustomers();
 		model.addAttribute("customers", customers);
 		return "list-customers";
 	}
