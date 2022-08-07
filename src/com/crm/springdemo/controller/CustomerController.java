@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.crm.springdemo.dao.CustomerDAO;
 import com.crm.springdemo.entity.Customer;
 import com.crm.springdemo.service.CustomerService;
 
@@ -23,5 +22,12 @@ public class CustomerController {
 		List<Customer> customers = customerService.getAllCustomers();
 		model.addAttribute("customers", customers);
 		return "list-customers";
+	}
+	
+	@RequestMapping("/showFormForAdd")
+	public String showFormForAdd(Model model) {
+		Customer customer = new Customer();
+		model.addAttribute("customer", customer);
+		return "customer-form";
 	}
 }
