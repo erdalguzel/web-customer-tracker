@@ -7,4 +7,6 @@ import com.crm.springdemo.entity.Customer;
 public interface CustomerService {
 
 	public List<Customer> getAllCustomers();
+
+	public void saveCustomer(Customer customer);
 }
