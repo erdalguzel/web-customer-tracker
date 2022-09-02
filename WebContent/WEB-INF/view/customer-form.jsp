@@ -56,11 +56,12 @@
 			</table>
 
 		</form:form>
-		
-		<div style="clear;both;"></div>
+
+		<div style=""></div>
 
 		<p>
-			<a href="${pageContext.request.contextPath}/customer/list">Go Back</a>
+			<a href="${pageContext.request.contextPath}/customer/list">Go
+				Back</a>
 		</p>
 	</div>
 </body>
